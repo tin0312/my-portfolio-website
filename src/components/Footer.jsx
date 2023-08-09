@@ -1,10 +1,10 @@
-import React from "React"
+import React from "react"
 
 
 export default function Footer() {
     return (
-        <footer>
-            <p>© 2023 - Developeed by Hoang Nhat Truong</p>
+        <footer className = "footer-wrapper">
+            <p>© 2023 - Developed by Hoang Nhat Truong</p>
         </footer>
     )
 }

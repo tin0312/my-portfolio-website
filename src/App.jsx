@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 import { BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css'
-import Layout from "./Components/Layout"
+import Layout from "./components/Layout"
 import About from "./Pages/About"
-import Home from "./Pages/Home"
+import Brand from "./Pages/Brand"
 import Projects from "./Pages/Projects"
-import Album from "./Pages/Album"
+import Contacts from "./Pages/Contacts"
 
 
 export default function App() {
@@ -15,10 +15,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = {<Layout />}>
-              <Route index element = {<Home/>} />
+              <Route path = "/brand"  element = {<Brand />} />
               <Route path = '/about' element = {<About/>} />
               <Route path = '/projects' element = {<Projects/>}/>
-              <Route path = '/album' element = {<Album/>}/>
+              <Route path = '/contacts' element = {<Contacts />}/>
           </Route>
         </Routes>
       </BrowserRouter>

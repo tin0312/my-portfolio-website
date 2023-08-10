@@ -15,7 +15,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = {<Layout />}>
-              <Route path = "/brand"  element = {<Brand />} />
+              <Route index element = {<Brand />} />
               <Route path = '/about' element = {<About/>} />
               <Route path = '/projects' element = {<Projects/>}/>
               <Route path = '/contacts' element = {<Contacts />}/>
@@ -25,4 +25,6 @@ export default function App() {
     </>
   )
 }
+
+// route branch is also route / when the page first loads
 

@@ -10,7 +10,7 @@ export default function Header() {
     }
     return (
         <header>
-            <Link className = "brand-name" to = "/brand">JustIn</Link>
+            <Link className = "brand-name" to = "/">truong</Link>
             <nav>
                 <NavLink to  = "/about" style = {({isActive}) => isActive ? isActiveLink : null }>
                     About

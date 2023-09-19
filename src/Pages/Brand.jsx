@@ -2,20 +2,28 @@ import React from "react";
 
 export default function Brand() {
   return (
-    <div className="brand-container ">
-      <div className="developer-wrapper">
-        <h1 className="developer-name">Hello, my name is <br/>Truong Hoang</h1>
-        <p className="developer-introduction">
-          Based in the Toronto, I’m a front-end developer <br />
-          passionate about building functional, real-world <br />
-          related web apps that enhance users experience{" "}
-        </p>
+    <div className="home-container ">
+      {/* Name && Introduction */}
+      <div className="introduction-container">
+        <div>
+          <h1 className="greeting">
+            Nice to meet you!
+            <br />
+            I’m Justin
+          </h1>
+          <p className="introduction-message">
+            Based in the Toronto, I’m a front-end developer
+            <br /> passionate about building accessible web apps
+            <br /> that users love.
+          </p>
+        </div>
       </div>
-      <div className="photo-wrapper">
+      {/* image */}
+      <div className="image-container">
         <img
           src="src/images/developer-photo.jpeg"
-          alt="Justin Hoang"
-          className="developer-image"
+          alt="developer-photo"
+          className="profile-picture"
         />
       </div>
     </div>

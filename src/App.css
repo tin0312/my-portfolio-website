@@ -62,7 +62,6 @@ nav a:hover {
   display: flex;
   align-items: center;
   width: 80%;
-  height: 50vh;
   margin: 0 auto;
   margin-top: 5%;
 }
@@ -132,14 +131,14 @@ nav a:hover {
 }
 .skill-header {
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 2%;
 }
 .skill-introduction {
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
@@ -148,38 +147,132 @@ nav a:hover {
 }
 /* Tech stacks icons*/
 
-.technology-icon{
+.technology-icon {
   width: 5%;
 }
-.skill-set{
+.skill-set {
   display: flex;
   margin-top: 5%;
   width: 100%;
   gap: 3%;
 }
 /* Project section*/
-.project-page{
-  border: 1px solid red;
-  width: 100%; 
+.project-page {
+  width: 100vw;
   margin: 5% auto;
   height: auto;
 }
-.project-container{
+.project-header {
+  width: 80%;
+  margin: 0 auto;
+}
+.project-container {
   display: flex;
   justify-content: space-between;
-  gap: 2%;
+  width: 80%;
+  height: auto;
+  margin: 2% auto 0;
+}
+.project-section {
+  margin-bottom: 3%;
+  width: 18%;
+  height: 100%;
+}
+.project-thumb-nail {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+}
+.project-content {
+  margin-top: 4%;
+}
+.project-stacks {
+  opacity: 0.6;
+}
+/* Contact section */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #242424;
+  width: 90%;
+  height: 60vh;
+  margin: 8% auto 0;
+}
+.contact-greeting {
+  width: 50%;
+  margin-left: 4%;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.contact-header {
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -2.5px;
+}
+.contact-message {
   margin-top: 2%;
+  opacity: 0.7;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
 }
-.project-section{
-  border: 1px solid white;
-  width: 400px;
-  height: 400px;
 
+.form-container form {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
 }
+/* form section */
+.form-container label {
+  opacity: 0.5;
+}
+input[type="text"],
+textarea {
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  margin-bottom: 4%;
+}
+input[type="text"],
+textarea::placeholder {
+  color: white;
+}
+button[type="submit"] {
+  background: transparent;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  align-self: flex-end;
+  padding-bottom: 2%;
+}
+button[type="submit"]::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+
+
 /* Footer */
 .footer-container {
   position: fixed;
-  bottom: 3%;
+  bottom: 2%;
   width: 100%;
   display: flex;
   justify-content: center;

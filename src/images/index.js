@@ -11,3 +11,8 @@ export { default as netlify } from "./netlifyIcon.png"
 export { default as figma } from "./figmaIcon.svg"
 export { default as npm } from "./npmIcon.svg"
 export { default as mySQL } from "./mySQLIcon.png"
+export { default as weatherThumbNail} from "./weatherThumbNail.png"
+export { default as quizThumbNail} from "./quizThumbNail.png"
+export { default as roomsystemThumbNail} from "./roomsystemThumbNail.png"
+export { default as chromeExtThumbNail} from "./chromeExtThumbNail.png"
+

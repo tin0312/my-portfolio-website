@@ -1,4 +1,4 @@
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,20 +6,20 @@
 body {
   color: white;
   background-color: #151515;
-  font-family:'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   height: auto;
 }
 
 /* Navigation Bar */
 header {
   display: flex;
-  letter-spacing: 2px ;
-  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 2px;
+  font-family: "Space Grotesk", sans-serif;
   overflow: hidden;
   width: 80%;
-  margin: 0 auto;
+  margin: 2% auto 0;
 }
-.nav-bar{
+.nav-bar {
   width: 50%;
   display: flex;
   justify-content: flex-end;
@@ -28,7 +28,7 @@ header .brand-name {
   width: 50%;
   text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
   animation: glow 2s infinite;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: white;
@@ -44,20 +44,21 @@ header a {
   padding: 1.5rem;
 }
 nav a {
-  color: rgba(255, 255, 255, 0.48);
+  color: white;
   text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
   animation: glow 2s infinite;
+  transition: color 1s ease;
 }
-header .brand-name:hover{
+header .brand-name:hover {
   color: green;
 }
-nav a:hover{
+nav a:hover {
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 /* home container */
-.home-container{
+.home-container {
   display: flex;
   align-items: center;
   width: 80%;
@@ -66,42 +67,119 @@ nav a:hover{
   margin-top: 5%;
 }
 .greeting {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 70px;
   margin-bottom: 43px;
 }
+#name {
+  overflow: hidden;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+}
+#name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #4ee1a0;
+  transform-origin: bottom left;
+  animation: underlineAnimation 3s ease infinite;
+}
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .introduction-container,
 .image-container {
   height: 100%;
   width: 50%;
 }
-.introduction-container{
+.introduction-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
 }
-.image-container{
+.image-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
-.profile-picture {
-  width: 380px;
-  height: 100%;
+.avatar {
+  width: 420px;
+  height: 90%;
   overflow: hidden;
+  border-radius: 100px;
 }
-.introduction-message{
+.introduction-message {
   font-size: 20px;
-  color:#D9D9D9;
+  color: #d9d9d9;
   font-family: "Space Grotesk", sans-serif;
 }
+/* About section */
+.about-container {
+  margin: 5% auto;
+  width: 80%;
+}
+.skill-header {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+.skill-introduction {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  opacity: 0.7;
+}
+/* Tech stacks icons*/
 
+.technology-icon{
+  width: 5%;
+}
+.skill-set{
+  display: flex;
+  margin-top: 5%;
+  width: 100%;
+  gap: 3%;
+}
+/* Project section*/
+.project-page{
+  border: 1px solid red;
+  width: 100%; 
+  margin: 5% auto;
+  height: auto;
+}
+.project-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  margin-top: 2%;
+}
+.project-section{
+  border: 1px solid white;
+  width: 400px;
+  height: 400px;
+
+}
 /* Footer */
-.footer-wrapper {
+.footer-container {
   position: fixed;
-  bottom: 20px;
+  bottom: 3%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -120,5 +198,3 @@ nav a:hover{
   transform: scale(1.5); /* Apply a scale transformation on hover */
   cursor: pointer;
 }
-
-

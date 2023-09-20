@@ -1,4 +1,5 @@
 import React from "react";
+import * as Images from "../images"
 
 export default function Brand() {
   return (
@@ -9,7 +10,7 @@ export default function Brand() {
           <h1 className="greeting">
             Nice to meet you!
             <br />
-            I’m Justin
+            I’m <span id = "name" >Justin</span>
           </h1>
           <p className="introduction-message">
             Based in the Toronto, I’m a front-end developer
@@ -21,9 +22,9 @@ export default function Brand() {
       {/* image */}
       <div className="image-container">
         <img
-          src="src/images/developer-photo.jpeg"
-          alt="developer-photo"
-          className="profile-picture"
+          src= {Images.avatar}
+          alt="avatar"
+          className="avatar"
         />
       </div>
     </div>

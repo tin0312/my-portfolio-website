@@ -178,11 +178,51 @@ nav a:hover {
   width: 18%;
   height: 100%;
 }
+.image-container{
+  width: 100%;
+  position: relative;
+}
 .project-thumb-nail {
   width: 100%;
   height: 70%;
   border-radius: 20px;
+  opacity: 1;
 }
+/* Make a container in each clickable images */
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.image-container:hover img{
+  cursor: pointer;
+  opacity: 0.4;
+}
+.image-container:hover .middle {
+  cursor: pointer;
+  opacity: 1;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  gap:2%;
+  width: 100%;
+}
+.text a:hover {
+  color: #4ee1a0;
+  cursor: pointer;
+}
+.text a{
+  text-decoration: none;
+  color: white;
+}
+
 .project-content {
   margin-top: 4%;
 }

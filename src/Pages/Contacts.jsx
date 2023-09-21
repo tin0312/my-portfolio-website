@@ -25,7 +25,7 @@ export default function Contacts() {
       const base = new Airtable({
         apiKey: "patVJYRDfNeQgFxcb.6d134f1e7190daf5a66ed80d732be67c3e981d8a0f9221dfe03eca5e901d8a45"
       }).base("app2ECwavIy178eTW");
-
+      // create a record
       const records = await base("Users Inquiry").create([
         {
           fields: {
@@ -35,8 +35,6 @@ export default function Contacts() {
           },
         },
       ]);
-
-      console.log("Record created", records);
       setFormInfo({
         name: "",
         email: "",

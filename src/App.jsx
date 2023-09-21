@@ -26,5 +26,3 @@ export default function App() {
   )
 }
 
-// route branch is also route / when the page first loads
-

@@ -72,7 +72,6 @@ nav a:hover {
   line-height: 95px;
 }
 #name {
-  overflow: hidden;
   position: relative;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -107,6 +106,7 @@ nav a:hover {
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 .image-container {
   display: flex;

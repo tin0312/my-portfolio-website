@@ -243,11 +243,13 @@ textarea {
   background: transparent;
   border-bottom: 1px solid white;
   margin-bottom: 4%;
-}
-input[type="text"],
-textarea::placeholder {
   color: white;
 }
+#message{
+  color: white;
+  height:150px;
+}
+
 button[type="submit"] {
   background: transparent;
   border: none;
@@ -286,7 +288,6 @@ button[type="submit"]::after {
   box-shadow: 0 0 20px rgba(0, 204, 0);
   transition: transform 0.3s;
 }
-
 .social-icon:hover {
   transform: scale(1.5); /* Apply a scale transformation on hover */
   cursor: pointer;

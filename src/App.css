@@ -7,9 +7,12 @@ body {
   color: white;
   background-color: #151515;
   font-family: "Syne", sans-serif;
-  height: auto;
 }
-
+.site-wrapper{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 6%;
+}
 /* Navigation Bar */
 header {
   display: flex;
@@ -19,10 +22,14 @@ header {
   width: 80%;
   margin: 2% auto 0;
 }
-.nav-bar {
+
+.nav-bar{
   width: 50%;
-  display: flex;
-  justify-content: flex-end;
+  padding-right: 0;
+}
+#custom-toogle{
+  background-color: white;
+  margin-left: auto;
 }
 header .brand-name {
   width: 50%;
@@ -32,7 +39,7 @@ header .brand-name {
   font-weight: 700;
   font-size: 32px;
   color: white;
-  transition: color 3s ease; /* Add a transition for the color property */
+  transition: color 3s ease; 
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,17 +50,17 @@ header a {
   font-weight: 600;
   padding: 1.5rem;
 }
-nav a {
-  color: white;
-  text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
-  animation: glow 2s infinite;
-  transition: color 1s ease;
-}
 header .brand-name:hover {
   color: green;
 }
-nav a:hover {
-  color: white;
+.nav-bar a {
+  text-shadow: 0 0 20px #00cc00;
+  animation: glow 2s infinite;
+  transition: color 1s ease;
+  padding-right: 0;
+}
+.nav-bar a:hover {
+  color: white !important; 
   text-decoration: none;
   cursor: pointer;
 }
@@ -62,7 +69,17 @@ nav a:hover {
   display: flex;
   align-items: center;
   width: 80%;
-  margin: 7% auto 0;
+  height: auto;
+  margin: 10% auto 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+.home-row{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 20%;
 }
 .greeting {
   font-family: "Space Grotesk", sans-serif;
@@ -94,27 +111,18 @@ nav a:hover {
     width: 100%;
   }
 }
-
-.introduction-container,
-.image-container {
-  height: 100%;
-  width: 50%;
-}
 .introduction-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100%;
-  width: 100%;
 }
-.image-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.avatar-container {
+  padding-right: 0;
+  height: 100%;
 }
 .avatar {
-  width: 420px;
+  width: 60%;
   height: 90%;
   overflow: hidden;
   border-radius: 100px;
@@ -153,16 +161,14 @@ nav a:hover {
 .skill-set-container{
   display: flex;
   margin-top: 5%;
-  height: 80vh;
+  height: 60vh;
 }
 .skill-set-container-one,
 .skill-set-container-two
 {
-  width: 50%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5%;
+  justify-content: space-around;
 }
 .progress-container{
   display: flex;
@@ -170,9 +176,9 @@ nav a:hover {
   align-items: center;
   width: 100%;
 }
-.two{
+/* .two{
   justify-content: flex-end;
-}
+} */
 .progress-bar{
   width: 50% ;
   background-color:#00cc00
@@ -180,24 +186,27 @@ nav a:hover {
 /* Project section*/
 .project-page {
   width: 100vw;
-  margin: 5% auto;
+  margin: 5% auto 0;
   height: auto;
 }
 .project-header {
   width: 80%;
   margin: 0 auto;
+  font-family: "Space Grotesk" sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -2.5px;
 }
 .project-container {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  height: auto;
   margin: 2% auto 0;
 }
-.project-section {
-  margin-bottom: 3%;
-  width: 18%;
-  height: 100%;
+.project-section{
+  display: flex;
+  flex-direction: column;
 }
 .image-container{
   width: 100%;
@@ -256,18 +265,17 @@ nav a:hover {
   justify-content: space-around;
   align-items: center;
   background-color: #242424;
-  width: 90%;
-  height: 60vh;
-  margin: 8% auto 0;
+  width: 80%;
+  height: auto;
+  margin: 10% auto 18%;
 }
 .contact-greeting {
-  width: 50%;
-  margin-left: 4%;
+  align-self: center;
 }
 .form-container {
   display: flex;
   justify-content: center;
-  width: 50%;
+  align-items: center;
 }
 .contact-header {
   color: #fff;
@@ -334,12 +342,12 @@ button[type="submit"]::after {
 
 /* Footer */
 .footer-container {
-  position: fixed;
-  bottom: 2%;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 5%;
   text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
   animation: glow 2s infinite;
 }

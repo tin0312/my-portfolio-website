@@ -1,6 +1,7 @@
 import React from "react";
 import * as Images from "../images";
-import { ProgressBar } from "react-bootstrap";
+import { ProgressBar, Container, Row, Col } from "react-bootstrap";
+
 
 export default function About() {
   const JavaScript = 90;
@@ -16,22 +17,26 @@ export default function About() {
   const Git = 80;
   const Figma = 90
   return (
-    <div className="about-container">
-      <div className="skill-introduction-container">
-        <h1 className="skill-header">My skills</h1>
-        <p className="skill-introduction">
-          I possess a versatile skill set in web development, encompassing
-          React, JavaScript, HTML, and CSS to create compelling user interfaces.
-          My expertise extends to database management using MySQL and Firebase,
-          enabling robust data-driven applications. Furthermore, I have
-          proficiency in server-side programming with Python and Flask, as well
-          as a knack for enhancing user experiences with jQuery.
-        </p>
-      </div>
-
-      <div className="skill-set-container">
-        <div className="skill-set-container-one">
-          <div className="progress-container">
+    <Container fluid className="about-container mb-5">
+      {/* Row 1 */}
+      <Row className="about-row">
+        <Col className="skill-introduction-container">
+          <h1 className="skill-header">My skills</h1>
+          <p className="skill-introduction">
+            I possess a versatile skill set in web development, encompassing
+            React, JavaScript, HTML, and CSS to create compelling user interfaces.
+            My expertise extends to database management using MySQL and Firebase,
+            enabling robust data-driven applications. Furthermore, I have
+            proficiency in server-side programming with Python and Flask, as well
+            as a knack for enhancing user experiences with jQuery.
+          </p>
+      </Col>
+      </Row>
+      {/* Row 2 */}
+      <Row className="skill-set-container d-flex flex-lg-row flex-column">
+        {/* Column 1 */}
+        <Col className="skill-set-container-one w-lg-50 w-100 pl-0 pr-0">
+          <Row className="progress-container d-flex justify-content-center">
             <img className="technology-icon" src={Images.js} alt="js-icon" />
             <ProgressBar
               className="progress-bar"
@@ -41,8 +46,8 @@ export default function About() {
               label={`${JavaScript}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container">
+          </Row>
+          <Row className="progress-container d-flex justify-content-center">
             <img
               className="technology-icon"
               src={Images.html}
@@ -56,8 +61,8 @@ export default function About() {
               label={`${html}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container">
+          </Row>
+          <Row className="progress-container d-flex justify-content-center">
             <img className="technology-icon" src={Images.css} alt="css-icon" />
             <ProgressBar
               className="progress-bar"
@@ -67,8 +72,8 @@ export default function About() {
               label={`${css}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container">
+          </Row>
+          <Row className="progress-container d-flex justify-content-center">
             <img
               className="technology-icon"
               src={Images.bootstrap}
@@ -82,8 +87,8 @@ export default function About() {
               label={`${bootstrap}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container">
+          </Row>
+          <Row className="progress-container d-flex justify-content-center">
             <img
               className="technology-icon"
               src={Images.react}
@@ -97,8 +102,8 @@ export default function About() {
               label={`${react}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container">
+          </Row>
+          <Row className="progress-container d-flex justify-content-center">
             <img
               className="technology-icon"
               src={Images.mySQL}
@@ -112,11 +117,11 @@ export default function About() {
               label={`${mySQL}%`}
               visuallyHidden
             />
-          </div>
-        </div>
-        {/* skill-set-container-two section */}
-        <div className="skill-set-container-two">
-        <div className="progress-container two">
+          </Row>
+        </Col>
+        {/* Column 2*/}
+        <Col className="skill-set-container-two w-lg-50 w-100 pl-0 pr-0">
+        <Row className="progress-container d-flex justify-content-lg-end justify-content-center ">
             <img
               className="technology-icon"
               src={Images.git}
@@ -130,8 +135,8 @@ export default function About() {
               label={`${Git}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container two">
+          </Row>
+          <Row className="progress-container two d-flex justify-content-lg-end justify-content-center">
             <img
               className="technology-icon"
               src={Images.firebase}
@@ -145,8 +150,8 @@ export default function About() {
               label={`${Firebase}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container two">
+          </Row>
+          <Row className="progress-container d-flex justify-content-lg-end justify-content-center">
             <img
               className="technology-icon"
               src={Images.jQuery}
@@ -160,8 +165,8 @@ export default function About() {
               label={`${jQuery}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container two">
+          </Row>
+          <Row className="progress-container d-flex justify-content-lg-end justify-content-center">
             <img
               className="technology-icon"
               src={Images.python}
@@ -175,8 +180,8 @@ export default function About() {
               label={`${Python}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container two">
+          </Row>
+          <Row className="progress-container d-flex justify-content-lg-end justify-content-center">
             <img
               className="technology-icon"
               src={Images.flask}
@@ -191,8 +196,8 @@ export default function About() {
               label={`${Flask}%`}
               visuallyHidden
             />
-          </div>
-          <div className="progress-container two">
+          </Row>
+          <Row className="progress-container d-flex justify-content-lg-end justify-content-center">
             <img
               className="technology-icon"
               src={Images.figma}
@@ -206,9 +211,9 @@ export default function About() {
               label={`${Figma}%`}
               visuallyHidden
             />
-          </div>
-        </div>
-      </div>
-    </div>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 }

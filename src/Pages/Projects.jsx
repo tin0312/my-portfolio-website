@@ -1,11 +1,12 @@
 import React from "react";
 import * as Images from "../images";
+import {Container, Row, Col} from "react-bootstrap"
 export default function Projects() {
   return (
-    <div className="project-page">
-      <h1 className="project-header">Project</h1>
-      <div className="project-container">
-        <div className="project-section">
+    <Container fluid className="project-page">
+      <Row className="project-header">Project</Row>
+      <Row className="project-container flex flex-lg-row flex-column align-items-center align-items-lg-start">
+        <Col lg = {3} sm = {12} className="project-section w-lg-18 w-75 mr-lg-1 mb-5 pr-0 pl-0 ">
           <div className="image-container">
           <img
             src={Images.weatherThumbNail}
@@ -23,9 +24,9 @@ export default function Projects() {
             <h3 className="project-title">WEATHER APP</h3>
             <h4 className="project-stacks">HTML • CSS • React • API </h4>
           </div>
-        </div>
+        </Col>
         {/* project section-2 */}
-        <div className="project-section">
+        <Col lg = {3} sm = {12} className="project-section w-lg-18 w-75 mb-5 pr-0 pl-0">
           <div className="image-container">
           <img
             src={Images.quizThumbNail}
@@ -43,10 +44,10 @@ export default function Projects() {
             <h3 className="project-title"> QUIZZICAL</h3>
             <h4 className="project-stacks">HTML • CSS • React • API </h4>
           </div>
-        </div>
+        </Col>
 
         {/* Project section-3 */}
-        <div className="project-section">
+        <Col lg = {3} sm = {12} className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0">
           <div className="image-container">
           <img
             src={Images.roomsystemThumbNail}
@@ -63,13 +64,13 @@ export default function Projects() {
           <div className="project-content">
             <h3 className="project-title">ROOM BOOKING SYSTEM</h3>
             <h4 className="project-stacks">
-              HTML • CSS • Bootstrap • Flask • mySQL • Python{" "}
+              HTML • CSS • Bootstrap • Flask • mySQL • Python
             </h4>
           </div>
-        </div>
+        </Col>
 
         {/* Project section-4 */}
-        <div className="project-section">
+        <Col lg = {3} sm = {12} className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0">
           <div className="image-container">
           <img
             src={Images.chromeExtThumbNail}
@@ -88,8 +89,8 @@ export default function Projects() {
               HTML • CSS • Javascript • jQuery{" "}
             </h4>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }

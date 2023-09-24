@@ -1,5 +1,6 @@
 import React from "react";
 import Airtable from "airtable";
+import {Container, Row, Col } from "react-bootstrap"
 
 export default function Contacts() {
   // Store form data
@@ -46,16 +47,17 @@ export default function Contacts() {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-greeting">
-        <h1 className="contact-header">Contact</h1>
-        <p className="contact-message">
-          I would love to hear about your project and how I <br />
-          could help. Please leave me a message, and I’ll get back
-          <br /> to you as soon as possible.
-        </p>
-      </div>
-      <div onSubmit={handleSubmit} className="form-container">
+    <Container fluid className="contact-container pl-0 pr-0 mb-xs-5">
+      <Row className="greeting-row d-flex flex-column flex-lg-row w-100 p-4">
+        <Col xs={12} lg ={6} className="contact-greeting mb-xs-5">
+          <h1 className="contact-header">Contact</h1>
+          <p className="contact-message">
+            I would love to hear about your project and how I <br />
+            could help. Please leave me a message, and I’ll get back
+            <br /> to you as soon as possible.
+          </p>
+        </Col>
+      <Col xs={12} lg={6} onSubmit={handleSubmit} className="form-container">
         <form action="">
           <label htmlFor="name">NAME</label>
           <input
@@ -84,7 +86,8 @@ export default function Contacts() {
           ></textarea>
           <button type="submit">SEND MESSAGE</button>
         </form>
-      </div>
-    </div>
+      </Col>
+      </Row>
+    </Container>
   );
 }

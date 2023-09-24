@@ -6,9 +6,9 @@ import { Container } from "react-bootstrap";
 
 export default function Brand() {
   return (
-    <Container fluid className="home-container mb-5 w-75">
+    <Container fluid className="home-container">
       {/* Name && Introduction */}
-      <Row className="home-row w-100 flex-lg-row flex-column w-75">
+      <Row className="home-row w-100 flex-lg-row flex-column">
         <Col xs={12} lg={6} className="introduction-container mb-5 mb-lg-0">
           <h1 className="greeting">
             Nice to meet you!

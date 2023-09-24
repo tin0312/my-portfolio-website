@@ -36,7 +36,7 @@ export default function About() {
       <Row className="skill-set-container d-flex flex-lg-row flex-column">
         {/* Column 1 */}
         <Col className="skill-set-container-one w-lg-50 w-100 pl-0 pr-0">
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img className="technology-icon" src={Images.js} alt="js-icon" />
             <ProgressBar
               className="progress-bar"
@@ -47,7 +47,7 @@ export default function About() {
               visuallyHidden
             />
           </Row>
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img
               className="technology-icon"
               src={Images.html}
@@ -62,7 +62,7 @@ export default function About() {
               visuallyHidden
             />
           </Row>
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img className="technology-icon" src={Images.css} alt="css-icon" />
             <ProgressBar
               className="progress-bar"
@@ -73,7 +73,7 @@ export default function About() {
               visuallyHidden
             />
           </Row>
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img
               className="technology-icon"
               src={Images.bootstrap}
@@ -88,7 +88,7 @@ export default function About() {
               visuallyHidden
             />
           </Row>
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img
               className="technology-icon"
               src={Images.react}
@@ -103,7 +103,7 @@ export default function About() {
               visuallyHidden
             />
           </Row>
-          <Row className="progress-container d-flex justify-content-center">
+          <Row className="progress-container d-flex justify-content-center justify-content-lg-start">
             <img
               className="technology-icon"
               src={Images.mySQL}

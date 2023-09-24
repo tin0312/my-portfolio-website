@@ -6,7 +6,7 @@ export default function Projects() {
     <Container fluid className="project-page">
       <Row className="project-header">Project</Row>
       <Row className="project-container flex flex-lg-row flex-column align-items-center align-items-lg-start">
-        <Col lg = {3} sm = {12} className="project-section w-lg-18 w-75 mr-lg-1 mb-5 pr-0 pl-0 ">
+        <Col lg = {3} sm = {12} className="project-section w-lg-50 w-75 mr-lg-1 mb-5 pr-0 pl-0 ">
           <div className="image-container">
           <img
             src={Images.weatherThumbNail}

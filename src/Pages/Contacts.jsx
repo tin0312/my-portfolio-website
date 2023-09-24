@@ -48,7 +48,7 @@ export default function Contacts() {
 
   return (
     <Container fluid className="contact-container pl-0 pr-0 mb-xs-5">
-      <Row className="greeting-row d-flex flex-column flex-lg-row w-100 p-4">
+      <Row className="greeting-row d-flex flex-column flex-lg-row w-100">
         <Col xs={12} lg ={6} className="contact-greeting mb-xs-5">
           <h1 className="contact-header">Contact</h1>
           <p className="contact-message">
@@ -57,7 +57,7 @@ export default function Contacts() {
             <br /> to you as soon as possible.
           </p>
         </Col>
-      <Col xs={12} lg={6} onSubmit={handleSubmit} className="form-container justify-content-xs-start justify-content-lg-center">
+      <Col xs={12} lg={6} onSubmit={handleSubmit} className="form-container d-flex justify-content-xs-center justify-content-lg-end pt-4 pb-4 ">
         <form action="">
           <label htmlFor="name">NAME</label>
           <input

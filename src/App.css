@@ -14,50 +14,50 @@ body {
   padding-bottom: 6%;
 }
 /* Navigation Bar */
-header {
+.header {
   display: flex;
   letter-spacing: 2px;
   font-family: "Space Grotesk", sans-serif;
   overflow: hidden;
-  width: 80%;
-  margin: 2% auto 0;
-}
-
-.nav-bar{
-  width: 50%;
+  width: 80vw;
+  margin: 4% auto 0;
+  padding-left: 0;
   padding-right: 0;
+}
+.header-row{
+  margin-left: 0;
+  margin-right: 0;
+
 }
 #custom-toogle{
   background-color: white;
-  margin-left: auto;
 }
-header .brand-name {
+.header .brand-name a{
   width: 50%;
   text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
   animation: glow 2s infinite;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2.5em;
   color: white;
   transition: color 3s ease; 
   text-decoration: none;
   cursor: pointer;
 }
-header a {
-  color: #fff;
+.nav-bar a {
+  color: green;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8em;
   font-weight: 600;
   padding: 1.5rem;
-}
-header .brand-name:hover {
-  color: green;
-}
-.nav-bar a {
   text-shadow: 0 0 20px #00cc00;
   animation: glow 2s infinite;
   transition: color 1s ease;
   padding-right: 0;
+}
+.header .brand-name a:hover {
+  cursor: pointer;
+  color: green;
 }
 .nav-bar a:hover {
   color: white !important; 
@@ -68,7 +68,7 @@ header .brand-name:hover {
 .home-container {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 80vw;
   margin: 10% auto 0;
   padding-right: 0;
   padding-left: 0;
@@ -85,7 +85,7 @@ header .brand-name:hover {
 .greeting {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 4.5em;
   margin-bottom: 43px;
   line-height: 95px;
 }
@@ -134,15 +134,35 @@ header .brand-name:hover {
   font-family: "Space Grotesk", sans-serif;
   width: 461px;
 }
-@media only screen and (min-width: 320px) {
+@media screen and (max-width: 575.98px) {
   .greeting{
-    font-size: 50px;
+    font-size: 3em;
   }
   .introduction-message{
     width: 100%;
   }
   .contact-header{
     font-size: 60px !important;
+  }
+  .home-container{
+    padding-bottom: 20%;
+  }
+  .project-container{
+    padding-bottom: 20%;
+  }
+  .contact-container{
+    background-color: #151515 !important;
+    padding-top: 10%;
+    padding-bottom: 15%;
+  }
+  .contact-header{
+    font-size: 3em !important;
+  }
+  .form-container form {
+    width: 100% !important;
+  }
+  .header a {
+    font-size: 1.3em ;
   }
 }
 /* About section */
@@ -189,18 +209,13 @@ header .brand-name:hover {
   align-items: center;
   width: 100%;
 }
-/* .two{
-  justify-content: flex-end;
-} */
 .progress-bar{
   width: 50% ;
   background-color:#00cc00
 }
 /* Project section*/
 .project-page {
-  width: 100vw;
   margin: 5% auto 0;
-  height: auto;
 }
 .project-header {
   width: 80%;
@@ -278,15 +293,11 @@ header .brand-name:hover {
   justify-content: space-around;
   align-items: center;
   background-color: #242424;
-  height: auto;
   margin: 10% auto 18%;
+  width: 80vw;
 }
 .contact-greeting {
   align-self: center;
-}
-.form-container {
-  display: flex;
-  align-items: center;
 }
 .contact-header {
   color: #fff;
@@ -305,10 +316,9 @@ header .brand-name:hover {
   font-weight: 500;
   line-height: 28px;
 }
-
 .form-container form {
   display: flex;
-  width: 70%;
+  width: 75%;
   flex-direction: column;
 }
 /* form section */
@@ -338,16 +348,23 @@ button[type="submit"] {
   cursor: pointer;
   align-self: flex-end;
   padding-bottom: 2%;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-shadow:  2px -5px 10px green;
 }
 button[type="submit"]::after {
   content: '';
   display: block;
   height: 3px;
-  width: 100%;
+  width: 0;
   background-color: green;
   position: absolute;
   bottom: 4px;
   left: 0;
+  transition: width .3s ease;
+}
+button[type= "submit"]:hover::after{
+    width: 100%;
 }
 
 

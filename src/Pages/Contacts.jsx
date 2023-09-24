@@ -57,7 +57,7 @@ export default function Contacts() {
             <br /> to you as soon as possible.
           </p>
         </Col>
-      <Col xs={12} lg={6} onSubmit={handleSubmit} className="form-container">
+      <Col xs={12} lg={6} onSubmit={handleSubmit} className="form-container justify-content-xs-start justify-content-lg-center">
         <form action="">
           <label htmlFor="name">NAME</label>
           <input

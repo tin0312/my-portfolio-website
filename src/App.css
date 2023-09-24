@@ -68,11 +68,12 @@ header .brand-name:hover {
 .home-container {
   display: flex;
   align-items: center;
-  width: 80%;
-  height: auto;
+  width: auto;
   margin: 10% auto 0;
   padding-right: 0;
   padding-left: 0;
+  justify-content: center;
+  align-items: center;
 }
 .home-row{
   display: flex;
@@ -131,6 +132,18 @@ header .brand-name:hover {
   font-size: 20px;
   color: #d9d9d9;
   font-family: "Space Grotesk", sans-serif;
+  width: 461px;
+}
+@media only screen and (min-width: 320px) {
+  .greeting{
+    font-size: 50px;
+  }
+  .introduction-message{
+    width: 100%;
+  }
+  .contact-header{
+    font-size: 60px !important;
+  }
 }
 /* About section */
 .about-container {
@@ -265,7 +278,6 @@ header .brand-name:hover {
   justify-content: space-around;
   align-items: center;
   background-color: #242424;
-  width: 80%;
   height: auto;
   margin: 10% auto 18%;
 }
@@ -274,13 +286,12 @@ header .brand-name:hover {
 }
 .form-container {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .contact-header {
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 88px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 88px;
   letter-spacing: -2.5px;
@@ -311,7 +322,7 @@ textarea {
   outline: 0;
   background: transparent;
   border-bottom: 1px solid white;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
   color: white;
 }
 #message{

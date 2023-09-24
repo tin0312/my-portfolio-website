@@ -147,6 +147,9 @@ body {
   .home-container{
     padding-bottom: 20%;
   }
+  .about-container{
+    padding-bottom: 15%;
+  }
   .project-container{
     padding-bottom: 20%;
   }
@@ -164,6 +167,14 @@ body {
   .header a {
     font-size: 1.3em ;
   }
+  .progress-bar{
+    width: 70% !important;
+  }
+  .skill-header{
+    font-size: 2em !important;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+  }
 }
 /* About section */
 .about-container {
@@ -173,7 +184,7 @@ body {
 .skill-header {
   color: #fff;
   font-family: "Poppins", sans-serif;
-  font-size: 64px;
+  font-size: 3.5em;
   font-weight: 700;
   margin-bottom: 2%;
 }
@@ -210,7 +221,7 @@ body {
   width: 100%;
 }
 .progress-bar{
-  width: 50% ;
+  width: 50%;
   background-color:#00cc00
 }
 /* Project section*/
@@ -325,7 +336,7 @@ body {
 .form-container label {
   opacity: 0.5;
 }
-input[type="text"],
+input[type="text"], input[type = "email"],
 textarea {
   border: none;
   border-radius: 0;

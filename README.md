@@ -29,6 +29,7 @@
 4. JavaScript (ES6+)
 5. [React](https://react.dev/)
 6. [React-router](https://reactrouter.com/en/main)
+7. [Airtable](https://www.bing.com/search?q=airtable&cvid=3743a29f1f5e40afb3baa3bff06f87fd&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgQIARAuMgYIAhBFGDkyBAgDEC4yBAgEEC4yBAgFEAAyBAgGEC4yBggHEEUYPDIGCAgQRRg80gEIMTQzN2owajmoAgCwAgA&FORM=ANAB01&PC=U531)
 
 ### Author
 

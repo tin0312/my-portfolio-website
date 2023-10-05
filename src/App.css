@@ -8,7 +8,7 @@ body {
   background-color: #151515;
   font-family: "Syne", sans-serif;
 }
-.site-wrapper{
+.site-wrapper {
   position: relative;
   min-height: 100vh;
   padding-bottom: 6%;
@@ -24,15 +24,14 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-.header-row{
+.header-row {
   margin-left: 0;
   margin-right: 0;
-
 }
-#custom-toogle{
+#custom-toogle {
   background-color: white;
 }
-.header .brand-name a{
+.header .brand-name a {
   width: 50%;
   text-shadow: 0 0 20px #00cc00, 0 0 40px #00cc00, 0 0 60px #00cc00;
   animation: glow 2s infinite;
@@ -40,29 +39,49 @@ body {
   font-weight: 700;
   font-size: 2.5em;
   color: white;
-  transition: color 3s ease; 
+  transition: color 3s ease;
   text-decoration: none;
   cursor: pointer;
 }
-.nav-bar a {
+.nav-items {
+  display: flex;
+  gap: 2em;
+}
+.nav__link {
+  position: relative;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  width: fit-content;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  height: 1rem;
+  background-color: white;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.nav__link:hover {
   color: green;
   text-decoration: none;
-  font-size: 1.8em;
-  font-weight: 600;
-  padding: 1.5rem;
-  text-shadow: 0 0 20px #00cc00;
-  animation: glow 2s infinite;
-  transition: color 1s ease;
-  padding-right: 0;
 }
+
+.nav__link:hover::after {
+  right: 0;
+  height: 2px;
+  background: green;
+}
+
 .header .brand-name a:hover {
   cursor: pointer;
   color: green;
-}
-.nav-bar a:hover {
-  color: white !important; 
-  text-decoration: none;
-  cursor: pointer;
 }
 /* home container */
 .home-container {
@@ -75,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.home-row{
+.home-row {
   display: flex;
   justify-content: space-around;
   margin-right: 0;
@@ -135,42 +154,42 @@ body {
   width: 461px;
 }
 @media screen and (max-width: 575.98px) {
-  .greeting{
+  .greeting {
     font-size: 3em;
   }
-  .introduction-message{
+  .introduction-message {
     width: 100%;
   }
-  .contact-header{
+  .contact-header {
     font-size: 60px !important;
   }
-  .home-container{
+  .home-container {
     padding-bottom: 20%;
   }
-  .about-container{
+  .about-container {
     padding-bottom: 15%;
   }
-  .project-container{
+  .project-container {
     padding-bottom: 20%;
   }
-  .contact-container{
+  .contact-container {
     background-color: #151515 !important;
     padding-top: 10%;
     padding-bottom: 15%;
   }
-  .contact-header{
+  .contact-header {
     font-size: 3em !important;
   }
   .form-container form {
     width: 100% !important;
   }
   .header a {
-    font-size: 1.3em ;
+    font-size: 1.3em;
   }
-  .progress-bar{
+  .progress-bar {
     width: 70% !important;
   }
-  .skill-header{
+  .skill-header {
     font-size: 2em !important;
     padding-top: 1em;
     padding-bottom: 0.5em;
@@ -202,27 +221,26 @@ body {
 .technology-icon {
   width: 8%;
 }
-.skill-set-container{
+.skill-set-container {
   display: flex;
   margin-top: 5%;
   height: 60vh;
 }
 .skill-set-container-one,
-.skill-set-container-two
-{
+.skill-set-container-two {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.progress-container{
+.progress-container {
   display: flex;
   gap: 3%;
   align-items: center;
   width: 100%;
 }
-.progress-bar{
+.progress-bar {
   width: 50%;
-  background-color:#00cc00
+  background-color: #00cc00;
 }
 /* Project section*/
 .project-page {
@@ -241,11 +259,11 @@ body {
   width: 80%;
   margin: 2% auto 0;
 }
-.project-section{
+.project-section {
   display: flex;
   flex-direction: column;
 }
-.image-container{
+.image-container {
   width: 100%;
   position: relative;
 }
@@ -257,7 +275,7 @@ body {
 }
 /* Make a container in each clickable images */
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -267,7 +285,7 @@ body {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
-.image-container:hover img{
+.image-container:hover img {
   cursor: pointer;
   opacity: 0.4;
 }
@@ -275,17 +293,17 @@ body {
   cursor: pointer;
   opacity: 1;
 }
-.text{
+.text {
   display: flex;
   flex-direction: column;
-  gap:2%;
+  gap: 2%;
   width: 100%;
 }
 .text a:hover {
   color: #4ee1a0;
   cursor: pointer;
 }
-.text a{
+.text a {
   text-decoration: none;
   color: white;
 }
@@ -334,7 +352,8 @@ body {
 .form-container label {
   opacity: 0.5;
 }
-input[type="text"], input[type = "email"],
+input[type="text"],
+input[type="email"],
 textarea {
   border: none;
   border-radius: 0;
@@ -344,9 +363,9 @@ textarea {
   margin-bottom: 10%;
   color: white;
 }
-#message{
+#message {
   color: white;
-  height:150px;
+  height: 150px;
 }
 
 button[type="submit"] {
@@ -359,10 +378,10 @@ button[type="submit"] {
   padding-bottom: 2%;
   border-radius: 0.5em;
   padding: 0.5em;
-  box-shadow:  2px -5px 10px green;
+  box-shadow: 2px -5px 10px green;
 }
 button[type="submit"]::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 0;
@@ -370,12 +389,11 @@ button[type="submit"]::after {
   position: absolute;
   bottom: 4px;
   left: 0;
-  transition: width .3s ease;
+  transition: width 0.3s ease;
 }
-button[type= "submit"]:hover::after{
-    width: 100%;
+button[type="submit"]:hover::after {
+  width: 100%;
 }
-
 
 /* Footer */
 .footer-container {

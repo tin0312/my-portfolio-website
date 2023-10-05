@@ -7,7 +7,7 @@ import {Container, Row, Col} from "react-bootstrap"
 export default function Header() {
   const isActiveLink = {
     fontWeight: "bold",
-    color: "white",
+    color: "green",
   };
 
   return (
@@ -20,22 +20,25 @@ export default function Header() {
       <Navbar expand="lg" className="nav-bar d-flex justify-content-end pr-0">
           <Navbar.Toggle aria-controls="basic-navbar-nav" id = "custom-toogle"/>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
+            <Nav className="ml-auto nav-items d-flex align-items-end mt-3">
               <NavLink   
                 to="/about"
                 style={({isActive}) => isActive ? isActiveLink : null}
+                className="nav__link"
               >
                 About
               </NavLink>
               <NavLink
                 to="/projects"
                 style={({isActive}) => isActive ? isActiveLink : null}
+                className="nav__link"
               >
                 Projects
               </NavLink>
               <NavLink
                 to="/contacts"
                 style={({isActive}) => isActive ? isActiveLink : null}
+                className="nav__link"
               >
                 Contacts
               </NavLink>

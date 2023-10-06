@@ -5,7 +5,12 @@
 }
 body {
   color: white;
-  background-color: #151515;
+  background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+  url('./images/header.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   font-family: "Syne", sans-serif;
 }
 .site-wrapper {
@@ -169,9 +174,6 @@ body {
   .about-container {
     padding-bottom: 15%;
   }
-  .project-container {
-    padding-bottom: 20%;
-  }
   .contact-container {
     background-color: #151515 !important;
     padding-top: 10%;
@@ -244,75 +246,96 @@ body {
 }
 /* Project section*/
 .project-page {
-  margin: 5% auto 0;
+  width: 70%;
+  margin: 10% auto;
 }
 .project-header {
-  width: 80%;
-  margin: 0 auto;
   font-family: "Space Grotesk" sans-serif;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 3em;
   line-height: 88px;
-  letter-spacing: -2.5px;
+  position: relative;
+}
+.project-header::after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -3px;
+    height: 0.07em;
+    width: 2em;
+    background: green;
+    margin: 0.6rem 0;
 }
 .project-container {
-  width: 80%;
-  margin: 2% auto 0;
-}
-.project-section {
   display: flex;
-  flex-direction: column;
+  background-color: #000;
+  height: 50vh;
+  margin-bottom: 15%;
+
 }
 .image-container {
-  width: 100%;
   position: relative;
 }
 .project-thumb-nail {
   width: 100%;
-  height: 70%;
+  height: 50vh;
   border-radius: 20px;
   opacity: 1;
 }
-/* Make a container in each clickable images */
-.middle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+.project-section{
+  gap: 0.8em;
 }
-.image-container:hover img {
-  cursor: pointer;
-  opacity: 0.4;
+.project-title{
+  font-size: 3rem;
 }
-.image-container:hover .middle {
-  cursor: pointer;
-  opacity: 1;
-}
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: 2%;
-  width: 100%;
-}
-.text a:hover {
-  color: #4ee1a0;
-  cursor: pointer;
-}
-.text a {
-  text-decoration: none;
-  color: white;
-}
-
-.project-content {
-  margin-top: 4%;
+.project-stacks,
+.project-description {
+  opacity: 0.6;
+  font-size: 1.2rem;
 }
 .project-stacks {
-  opacity: 0.6;
+  margin-left: 1em;
+}
+.link-text{
+  position: relative;
+  display: inline-block;
+  padding: .6rem;
+  color: #f0e9f2 !important;
+  text-decoration: none !important; 
+  border-bottom: 0.1em solid green;
+  z-index: 1000;
+}
+.link-text::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: white;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+.link-text:hover::after{
+  cursor: pointer;
+  right: 0;
+  background-color: green;
+  color: #f0e9f2;
+}
+.link-text span{
+  padding-left: 0.6em;
+}
+.work-links{
+  display: flex;
+  align-items: center;
+}
+.work-code{
+  height: 2.2em;
+  padding-left: 2em;
+  transition: all .3s;
+}
+.work-code:hover{
+  transform: scale(1.2);
 }
 /* Contact section */
 .contact-container {

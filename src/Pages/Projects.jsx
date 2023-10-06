@@ -4,209 +4,210 @@ import { Container, Row, Col } from "react-bootstrap";
 export default function Projects() {
   return (
     <Container fluid className="project-page">
-      <Row className="project-header">Project</Row>
-      <Row className="project-container flex flex-lg-row flex-column align-items-center align-items-lg-start justify-content-between">
+      <Row className="project-header mb-5">My Work</Row>
+      {/* project section-1 */}
+      <Row className="project-container">
         <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-50 w-75 mr-lg-1 mb-5 pr-0 pl-0 "
+          lg={4}
+          xs={12}
+          className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <div className="image-container">
-            <img
-              src={Images.weatherThumbNail}
-              alt="weather-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-                <a
-                  href="https://clinquant-marshmallow-2752bd.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View live
-                </a>
-                <a href="https://github.com/tin0312/weather-app">View source</a>
-              </div>
-            </div>
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">WEATHER APP</h3>
-            <h4 className="project-stacks">HTML • CSS • React • API </h4>
-          </div>
-        </Col>
-        {/* project section-2 */}
-        <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-18 w-75 mb-5 pr-0 pl-0"
-        >
-          <div className="image-container">
-            <img
-              src={Images.quizThumbNail}
-              alt="weather-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-                <a
-                  href="https://unrivaled-sorbet-b6c280.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View live
-                </a>
-                <a href="https://github.com/tin0312/quizApp">View source</a>
-              </div>
-            </div>
-          </div>
-          <div className="project-content">
-            <h3 className="project-title"> QUIZZICAL</h3>
-            <h4 className="project-stacks">HTML • CSS • React • API </h4>
+          <h3 className="project-title">Weather App</h3>
+          <p className="project-description">
+            A weather app to help you update with weather conditions
+          </p>
+          <ul className="project-stacks">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>API</li>
+          </ul>
+          <div className="work-links">
+            <a
+              href="https://clinquant-marshmallow-2752bd.netlify.app/"
+              className="link-text"
+            >
+              Visit site <span>&rarr;</span>
+            </a>
+            <a href="https://github.com/tin0312/weather-app">
+              <img
+                src={Images.githubIcon}
+                alt="github-icon"
+                className="work-code"
+              />
+            </a>
           </div>
         </Col>
 
-        {/* Project section-3 */}
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+          <img
+            src={Images.weatherThumbNail}
+            alt="weather-thumb-nail"
+            className="project-thumb-nail"
+          />
+        </Col>
+      </Row>
+      {/* Project Section-2 */}
+      <Row className="project-container">
         <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0"
+          lg={4}
+          xs={12}
+          className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <div className="image-container">
-            <img
-              src={Images.roomsystemThumbNail}
-              alt="weather-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-                <a
-                  href="http://roomreservation.pythonanywhere.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View live
-                </a>
-                <a href="https://github.com/tin0312/roomBookingSystem">
-                  View source
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">ROOM BOOKING SYSTEM</h3>
-            <h4 className="project-stacks">
-              HTML • CSS • Bootstrap • Flask • mySQL • Python
-            </h4>
+          <h3 className="project-title">Quizzical</h3>
+          <p className="project-description">
+            A quiz app to help you leverage your knowledge in various areas
+          </p>
+          <ul className="project-stacks">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>API</li>
+          </ul>
+          <div className="work-links">
+            <a
+              href="https://unrivaled-sorbet-b6c280.netlify.app/"
+              className="link-text"
+            >
+              Visit site <span>&rarr;</span>
+            </a>
+            <a href="https://github.com/tin0312/quizApp">
+              <img
+                src={Images.githubIcon}
+                alt="github-icon"
+                className="work-code"
+              />
+            </a>
           </div>
         </Col>
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+          <img
+            src={Images.quizThumbNail}
+            alt="quiz-thumb-nail"
+            className="project-thumb-nail"
+          />
+        </Col>
+      </Row>
 
-        {/* Project section-4 */}
+      {/* Project Section-3 */}
+      <Row className="project-container">
         <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0"
+          lg={4}
+          xs={12}
+          className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <div className="image-container">
-            <img
-              src={Images.chromeExtThumbNail}
-              alt="weather-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-                <a
-                  href="https://github.com/tin0312/walk-more-than-you-scroll"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View source
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">Walk-As-You-Scroll</h3>
-            <h4 className="project-stacks">
-              HTML • CSS • Javascript • jQuery{" "}
-            </h4>
+          <h3 className="project-title">Room Booking System</h3>
+          <p className="project-description">
+            An online room booking system to help you reserve your study room with various options 
+          </p>
+          <ul className="project-stacks">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>Flask</li>
+            <li>mySQL</li>
+            <li>Python</li>
+          </ul>
+          <div className="work-links">
+            <a
+              href="http://roomreservation.pythonanywhere.com/"
+              className="link-text"
+            >
+              Visit site <span>&rarr;</span>
+            </a>
+            <a href="https://github.com/tin0312/roomBookingSystem">
+              <img
+                 src={Images.githubIcon}
+                alt="github-icon"
+                className="work-code"
+              />
+            </a>
           </div>
         </Col>
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+          <img
+            src={Images.roomsystemThumbNail}
+            alt="room-system-thumb-nail"
+            className="project-thumb-nail"
+          />
+        </Col>
+      </Row>
 
-        {/* Project section-5 */}
+      {/* Project Section-4 */}
+      <Row className="project-container">
         <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0"
+          lg={4}
+          xs={12}
+          className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <div className="image-container">
-            <img
-              src={Images.pwAppThumbnail}
-              alt="pwApp-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-                <a
-                  href="https://dynamic-platypus-74b5b2.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View live
-                </a>
-                <a
-                  href="https://github.com/tin0312/password-generator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View source
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">Password Generator</h3>
-            <h4 className="project-stacks">HTML • CSS • React • Bootstrap </h4>
+          <h3 className="project-title">Walk-As-You-Scroll</h3>
+          <p className="project-description">
+           A chrome extension to help you track screen time and improve overal health
+          </p>
+          <ul className="project-stacks">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+          </ul>
+          <div className="work-links">
+            <a
+              href="https://github.com/tin0312/walk-more-than-you-scroll"
+              className="link-text"
+            >
+              View source <span>&rarr;</span>
+            </a>
           </div>
         </Col>
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+          <img
+            src={Images.chromeExtThumbNail}
+            alt="chrome-extension-thumb-nail"
+            className="project-thumb-nail"
+          />
+        </Col>
+      </Row>
 
-        {/* Project section-6 */}
+      {/* Project Section-5 */}
+      <Row className="project-container">
         <Col
-          lg={3}
-          sm={12}
-          className="project-section w-lg-18 mb-5 w-75 pr-0 pl-0"
+          lg={4}
+          xs={12}
+          className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <div className="image-container">
-            <img
-              src={Images.ecommerceThumbnail}
-              alt="upcoming-thumb-nail"
-              className="project-thumb-nail"
-            />
-            <div className="middle">
-              <div className="text">
-              <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  In Progress
-                </a>
-                <a
-                  href="https://github.com/tin0312/e-commerce"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View source
-                </a>
-              </div>
-            </div>
+          <h3 className="project-title">Password Generator</h3>
+          <p className="project-description">
+            A password generator app to help you pick a secure password of choice
+          </p>
+          <ul className="project-stacks">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+          </ul>
+          <div className="work-links">
+            <a
+              href="https://dynamic-platypus-74b5b2.netlify.app/"
+              className="link-text"
+            >
+              Visit site <span>&rarr;</span>
+            </a>
+            <a href="https://github.com/tin0312/password-generator">
+              <img
+                src={Images.githubIcon}
+                alt="github-icon"
+                className="work-code"
+              />
+            </a>
           </div>
-          <div className="project-content">
-            <h3 className="project-title">E-Commerce</h3>
-            <h4 className="project-stacks">
-              HTML • SASS • React • Tailwind • NextJS • Prisma • Stripe
-            </h4>
-          </div>
+        </Col>
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+          <img
+            src={Images.pwAppThumbnail}
+            alt="password-app-thumb-nail"
+            className="project-thumb-nail"
+          />
         </Col>
       </Row>
     </Container>

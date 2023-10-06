@@ -19,4 +19,5 @@ export { default as quizThumbNail} from "./quizThumbNail.png"
 export { default as roomsystemThumbNail} from "./roomsystemThumbNail.png"
 export { default as chromeExtThumbNail} from "./chromeExtThumbNail.png"
 export { default as pwAppThumbnail} from "./pwAppThumbnail.png"
+export { default as arrowUp} from "./arrow-up.svg"
 

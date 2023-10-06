@@ -2,14 +2,37 @@ import React from "react";
 import * as Images from "../images";
 import { Container, Row, Col } from "react-bootstrap";
 export default function Projects() {
+
+const backToTop = document.querySelector(".back-to-top")
+let isBackToTop = false
+
+// Conditionally render the button
+function renderToTopButton(isBackToTop){
+  if (backToTop) {
+    backToTop.style.visibility = isBackToTop ? "visible" : "hidden";
+    backToTop.style.opacity = isBackToTop ? "1" : "0";
+    backToTop.style.transform = isBackToTop ? "scale(1)" : "scale(0)";
+  }
+}
+// listen for the scroll event
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 700){
+    isBackToTop = true
+    renderToTopButton(isBackToTop);
+  } else {
+    isBackToTop = false
+    renderToTopButton(isBackToTop);
+  }
+}
+)
   return (
-    <Container fluid className="project-page">
+    <Container fluid className="project-page pb-4">
       <Row className="project-header mb-5">My Work</Row>
       {/* project section-1 */}
-      <Row className="project-container">
+      <Row className="project-container d-flex flex-column flex-lg-row flex-column-reverse h-auto">
         <Col
           lg={4}
-          xs={12}
+          sm={12}
           className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
           <h3 className="project-title">Weather App</h3>
@@ -40,7 +63,7 @@ export default function Projects() {
           </div>
         </Col>
 
-        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+        <Col sm={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
             src={Images.weatherThumbNail}
             alt="weather-thumb-nail"
@@ -48,8 +71,9 @@ export default function Projects() {
           />
         </Col>
       </Row>
+
       {/* Project Section-2 */}
-      <Row className="project-container">
+      <Row className="project-container d-flex flex-column flex-lg-row flex-column-reverse h-auto">
         <Col
           lg={4}
           xs={12}
@@ -81,7 +105,7 @@ export default function Projects() {
             </a>
           </div>
         </Col>
-        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
             src={Images.quizThumbNail}
             alt="quiz-thumb-nail"
@@ -91,7 +115,7 @@ export default function Projects() {
       </Row>
 
       {/* Project Section-3 */}
-      <Row className="project-container">
+      <Row className="project-container d-flex flex-column flex-lg-row flex-column-reverse h-auto">
         <Col
           lg={4}
           xs={12}
@@ -99,7 +123,8 @@ export default function Projects() {
         >
           <h3 className="project-title">Room Booking System</h3>
           <p className="project-description">
-            An online room booking system to help you reserve your study room with various options 
+            An online room booking system to help you reserve your study room
+            with various options
           </p>
           <ul className="project-stacks">
             <li>HTML</li>
@@ -118,14 +143,14 @@ export default function Projects() {
             </a>
             <a href="https://github.com/tin0312/roomBookingSystem">
               <img
-                 src={Images.githubIcon}
+                src={Images.githubIcon}
                 alt="github-icon"
                 className="work-code"
               />
             </a>
           </div>
         </Col>
-        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
             src={Images.roomsystemThumbNail}
             alt="room-system-thumb-nail"
@@ -135,7 +160,7 @@ export default function Projects() {
       </Row>
 
       {/* Project Section-4 */}
-      <Row className="project-container">
+      <Row className="project-container d-flex flex-column flex-lg-row flex-column-reverse h-auto">
         <Col
           lg={4}
           xs={12}
@@ -143,7 +168,8 @@ export default function Projects() {
         >
           <h3 className="project-title">Walk-As-You-Scroll</h3>
           <p className="project-description">
-           A chrome extension to help you track screen time and improve overal health
+            A chrome extension to help you track screen time and improve overal
+            health
           </p>
           <ul className="project-stacks">
             <li>HTML</li>
@@ -160,7 +186,7 @@ export default function Projects() {
             </a>
           </div>
         </Col>
-        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
             src={Images.chromeExtThumbNail}
             alt="chrome-extension-thumb-nail"
@@ -170,7 +196,7 @@ export default function Projects() {
       </Row>
 
       {/* Project Section-5 */}
-      <Row className="project-container">
+      <Row className="project-container d-flex flex-column flex-lg-row flex-column-reverse h-auto">
         <Col
           lg={4}
           xs={12}
@@ -178,7 +204,8 @@ export default function Projects() {
         >
           <h3 className="project-title">Password Generator</h3>
           <p className="project-description">
-            A password generator app to help you pick a secure password of choice
+            A password generator app to help you pick a secure password of
+            choice
           </p>
           <ul className="project-stacks">
             <li>HTML</li>
@@ -202,7 +229,7 @@ export default function Projects() {
             </a>
           </div>
         </Col>
-        <Col xs={12} lg={8} className="image-container pr-0 pl-0">
+        <Col xs={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
             src={Images.pwAppThumbnail}
             alt="password-app-thumb-nail"
@@ -210,6 +237,13 @@ export default function Projects() {
           />
         </Col>
       </Row>
+      <a href="#top" className="back-to-top" title="Back to Top">
+        <img
+          src= {Images.arrowUp}
+          alt="Back to Top"
+          className="back-to-top__image"s
+        />
+      </a>
     </Container>
   );
 }

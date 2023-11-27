@@ -189,7 +189,6 @@ body {
     font-size: 2em !important;
   }
   .contact-container {
-    background-color: #151515 !important;
     padding-top: 10%;
     padding-bottom: 15%;
   }
@@ -307,13 +306,16 @@ body {
 .project-title {
   font-size: 2rem;
 }
-.project-stacks,
 .project-description {
   opacity: 0.6;
   font-size: 1.2rem;
 }
 .project-stacks {
-  margin-left: 1em;
+  gap: 0.4em;
+}
+.project-stacks li{
+  list-style: none;
+  
 }
 /* back-to-top button */
 .back-to-top {
@@ -382,7 +384,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #242424;
   margin: 10% auto 18%;
   width: 80vw;
 }

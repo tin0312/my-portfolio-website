@@ -2,28 +2,26 @@ import React from "react";
 import * as Images from "../images";
 import { Container, Row, Col } from "react-bootstrap";
 export default function Projects() {
+  const backToTop = document.querySelector(".back-to-top");
+  const [isBackToTop, setIsBackToTop] = React.useState(false);
 
-const backToTop = document.querySelector(".back-to-top")
-const [isBackToTop, setIsBackToTop] = React.useState(false)
-
-// Conditionally render the button
-function renderToTopButton(isBackToTop){
-  if (backToTop) {
-    backToTop.style.visibility = isBackToTop ? "visible" : "hidden";
-    backToTop.style.opacity = isBackToTop ? "1" : "0";
-    backToTop.style.transform = isBackToTop ? "scale(1)" : "scale(0)";
+  // Conditionally render the button
+  function renderToTopButton(isBackToTop) {
+    if (backToTop) {
+      backToTop.style.visibility = isBackToTop ? "visible" : "hidden";
+      backToTop.style.opacity = isBackToTop ? "1" : "0";
+      backToTop.style.transform = isBackToTop ? "scale(1)" : "scale(0)";
+    }
   }
-}
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 700){
-    setIsBackToTop(true)
-    renderToTopButton(isBackToTop);
-  } else {
-    setIsBackToTop(false)
-    renderToTopButton(isBackToTop);
-  }
-}
-)
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      setIsBackToTop(true);
+      renderToTopButton(isBackToTop);
+    } else {
+      setIsBackToTop(false);
+      renderToTopButton(isBackToTop);
+    }
+  });
   return (
     <Container fluid className="project-page p-4">
       <Row className="project-header mb-5">My Work</Row>
@@ -38,12 +36,31 @@ window.addEventListener("scroll", () => {
           <p className="project-description">
             A weather app to help you update with weather conditions
           </p>
-          <ul className="project-stacks">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>React</li>
-            <li>API</li>
+          <ul className="project-stacks d-flex justify-center align-center">
+            <li>
+              <img
+                src={Images.tailwind}
+                alt="react-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.react}
+                alt="react-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.firebase}
+                alt="firebase-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img src={Images.api} alt="api-icon" style={{ width: "2em" }} />
+            </li>
           </ul>
           <div className="work-links">
             <a
@@ -82,11 +99,24 @@ window.addEventListener("scroll", () => {
           <p className="project-description">
             A quiz app to help you leverage your knowledge in various areas
           </p>
-          <ul className="project-stacks">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React</li>
-            <li>API</li>
+          <ul className="project-stacks d-flex">
+            <li>
+              <img
+                src={Images.bootstrap}
+                alt="bootstrap-icon"
+                style={{ width: "3em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.react}
+                alt="react-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img src={Images.api} alt="api-icon" style={{ width: "2em" }} />
+            </li>
           </ul>
           <div className="work-links">
             <a
@@ -125,13 +155,29 @@ window.addEventListener("scroll", () => {
             An online room booking system to help you reserve your study room
             with various options
           </p>
-          <ul className="project-stacks">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Bootstrap</li>
-            <li>Flask</li>
-            <li>mySQL</li>
-            <li>Python</li>
+          <ul className="project-stacks d-flex">
+            <li>
+              <img
+                src={Images.bootstrap}
+                alt="bootstrap-icon"
+                style={{ width: "3em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.flask}
+                alt="flask-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.mySQL}
+                alt="mySQL-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li><img src={Images.python} alt="python-icon" style={{width: "2em"}}/></li>
           </ul>
           <div className="work-links">
             <a
@@ -170,11 +216,28 @@ window.addEventListener("scroll", () => {
             A chrome extension to help you track screen time and improve overal
             health
           </p>
-          <ul className="project-stacks">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
+          <ul className="project-stacks d-flex">
+            <li>
+              <img
+                src={Images.typescript}
+                alt="typescript-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.js}
+                alt="javascript-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.jQuery}
+                alt="jQuery-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
           </ul>
           <div className="work-links">
             <a
@@ -201,25 +264,35 @@ window.addEventListener("scroll", () => {
           xs={12}
           className="project-section pr-0 pl-0 d-flex flex-column h-100 justify-content-center"
         >
-          <h3 className="project-title">Password Generator</h3>
+          <h3 className="project-title">Nails Salon Web Page</h3>
           <p className="project-description">
-            A password generator app to help you pick a secure password of
-            choice
+            The nail salon web page allows customers to effortlessly exlore
+            business offers with booking integration.
           </p>
-          <ul className="project-stacks">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React</li>
-            <li>Bootstrap</li>
+          <ul className="project-stacks d-flex">
+            <li>
+              <img src={Images.sass} alt="sass-icon" style={{ width: "2em" }} />
+            </li>
+            <li>
+              <img
+                src={Images.react}
+                alt="react-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
+            <li>
+              <img
+                src={Images.tailwind}
+                alt="tailwind-icon"
+                style={{ width: "2em" }}
+              />
+            </li>
           </ul>
           <div className="work-links">
-            <a
-              href="https://dynamic-platypus-74b5b2.netlify.app/"
-              className="link-text"
-            >
+            <a href="https://ptnailsbarmilton.com//" className="link-text">
               Visit site <span>&rarr;</span>
             </a>
-            <a href="https://github.com/tin0312/password-generator">
+            <a href="https://github.com/tin0312/PT-Nails-and-Bar-Milton">
               <img
                 src={Images.githubIcon}
                 alt="github-icon"
@@ -230,7 +303,7 @@ window.addEventListener("scroll", () => {
         </Col>
         <Col xs={12} lg={8} className="image-container pr-0 pl-0 mb-4 mb-lg-0">
           <img
-            src={Images.pwAppThumbnail}
+            src={Images.salonThumbNail}
             alt="password-app-thumb-nail"
             className="project-thumb-nail"
           />
@@ -238,7 +311,7 @@ window.addEventListener("scroll", () => {
       </Row>
       <a href="#top" className="back-to-top" title="Back to Top">
         <img
-          src= {Images.arrowUp}
+          src={Images.arrowUp}
           alt="Back to Top"
           className="back-to-top__image"
         />

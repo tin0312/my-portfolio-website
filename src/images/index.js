@@ -4,6 +4,10 @@ export { default as githubIcon } from './github.svg';
 export {default as linkedinicon } from './linkedin.svg'
 export { default as js } from "./jsIcon.png"
  export { default as react } from "./reactIcon.png"
+ export { default as tailwind } from "./tailwindIcon.png"
+ export { default as api } from "./apiIcon.png"
+ export { default as sass } from "./sassIcon.png"
+ export { default as typescript } from "./typescriptIcon.png"
 export { default as html } from "./htmlIcon.png"
 export { default as css } from "./cssIcon.png"
 export { default as bootstrap } from "./bootstrapIcon.png"
@@ -18,6 +22,6 @@ export { default as weatherThumbNail} from "./weatherThumbNail.png"
 export { default as quizThumbNail} from "./quizThumbNail.png"
 export { default as roomsystemThumbNail} from "./roomsystemThumbNail.png"
 export { default as chromeExtThumbNail} from "./chromeExtThumbNail.png"
-export { default as pwAppThumbnail} from "./pwAppThumbnail.png"
+export { default as salonThumbNail} from "./salonThumbNail.png"
 export { default as arrowUp} from "./arrow-up.svg"
 

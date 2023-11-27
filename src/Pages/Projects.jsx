@@ -1,6 +1,8 @@
 import React from "react";
 import * as Images from "../images";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from 'react-scroll';
+
 export default function Projects() {
   const backToTop = document.querySelector(".back-to-top");
   const [isBackToTop, setIsBackToTop] = React.useState(false);
@@ -309,13 +311,9 @@ export default function Projects() {
           />
         </Col>
       </Row>
-      <a href="#top" className="back-to-top" title="Back to Top">
-        <img
-          src={Images.arrowUp}
-          alt="Back to Top"
-          className="back-to-top__image"
-        />
-      </a>
+      <Link to="top" smooth={true} duration={500} className={`back-to-top ${isBackToTop ? 'visible' : ''}`} offset={-70} title="Back-to-Top">
+        <img src={Images.arrowUp} alt="Back-to-Top" className="back-to-top__image" />
+      </Link>
     </Container>
   );
 }

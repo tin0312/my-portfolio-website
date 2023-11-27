@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <Container fluid className = "header">
+    <Container fluid className = "header"  id="top">
       <Row className = "header-row w-100">
       <Col xs={6} lg={6} className="brand-name d-flex align-items-lg-center justify-content-center justify-content-lg-start" to="/">
             <div><Link to= "/">Justin</Link></div>
